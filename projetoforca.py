@@ -273,16 +273,24 @@ while (categoria != "s"):
 				bonecoforcaComemorando()
 				print("\nParabéns, você fugiu da forca e ganhou o jogo!!")
 				print("\nA palavra é:", palavra)
-				jogarNovamente = input("\nDeseja jogar novamente? (Digite [S] para SIM/Digite [N] para NÃO): ") .lower() .strip()
-				if jogarNovamente == "s":
-					menu()
-					letrasDigitadas = []
-					letrasAcertadas = []
-					tentativas = 5
-					break
-				else:
-					print("\nJogo Finalizado!!")
-					categoria = "s"
+				while True:
+					jogarNovamente = input("\nDeseja jogar novamente? (Digite [S] para SIM/Digite [N] para NÃO): ").lower().strip()
+					if jogarNovamente == "s" or jogarNovamente == "n":
+						if jogarNovamente == "s":
+							menu()
+							letrasDigitadas = []
+							letrasAcertadas = []
+							tentativas = 5
+							palavra = "s"
+							break
+						elif jogarNovamente == "n":
+							print("\nJogo Finalizado!!")
+							palavra = "s"
+							categoria = "s"
+							break
+					else:
+						print("Caractere Invalido, digite ou S ou N")
+						continue
 		elif (letrasChutadas in alfabeto) and (letrasChutadas not in palavra):
 			print("\nNão tem essa letra na palavra :/")
 			tentativas -= 1
