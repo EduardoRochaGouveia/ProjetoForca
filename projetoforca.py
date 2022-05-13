@@ -27,7 +27,7 @@ def menu():
 	#                                                  #
 	#    Grupo:                                        #
 	#    Daniela Lima                                  #
-	#    Eduargo Gouveia                               #
+	#    Eduardo Gouveia                               #
 	#    Fernanda Mota                                 #
 	#    Jullyana Maciel                               # 
 	#    Larissa Maia                                  #
